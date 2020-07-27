@@ -73,12 +73,19 @@
   }
 
   function setBoxHeights(element) {
+    console.error('stacktrace');
     var el = element.clone().css({
           height: 'auto',
           width: element.width(),
           maxHeight: 'none',
           overflow: 'hidden'
         }).insertAfter(element),
+        console.log('element:');
+        console.log(element.outerHeight());
+        console.log(element);
+        console.log('el:');
+        console.log(el.outerHeight());
+        console.log(el);
         expandedHeight = element.outerHeight(),
         cssMaxHeight = parseInt(el.css({maxHeight: ''}).css('max-height').replace(/[^-\d\.]/g, ''), 10),
         defaultHeight = element.data('defaultHeight');
