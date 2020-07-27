@@ -80,10 +80,12 @@
           overflow: 'hidden'
         }).insertAfter(element),
         //expandedHeight = element.outerHeight(),
-        window.attila_1 = element.outerHeight(),
         expandedHeight = 800,
         cssMaxHeight = parseInt(el.css({maxHeight: ''}).css('max-height').replace(/[^-\d\.]/g, ''), 10),
         defaultHeight = element.data('defaultHeight');
+
+        window.attila_1 = element.outerHeight(),
+        window.attila_2 = el.outerHeight(),
 
     el.remove();
 
